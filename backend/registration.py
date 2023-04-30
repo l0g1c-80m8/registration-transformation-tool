@@ -89,6 +89,7 @@ class Registration:
         ]
 
         # extra 7.2. calculate quaternion rotation
+        # https://stackoverflow.com/questions/32208838/rotation-matrix-to-quaternion-equivalence
         r = np.math.sqrt(1.0 + rot[0, 0] + rot[1, 1] + rot[2, 2]) * 0.5
         self._quaternion_rot = [
             (rot[2, 1] - rot[1, 2]) / (4 * r),  # i
@@ -98,6 +99,7 @@ class Registration:
         ]
 
         # extra 7.3. calculate euler angles
+        # https://stackoverflow.com/questions/54616049/converting-a-rotation-matrix-to-euler-angles-and-back-special-case
         beta = -np.arcsin(rot[2, 0])
         self._euler_rot = [
             np.arctan2(rot[2, 1] / np.cos(beta), rot[2, 2] / np.cos(beta)),  # alpha
