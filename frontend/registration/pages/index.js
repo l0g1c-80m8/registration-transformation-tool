@@ -49,7 +49,7 @@ export default function Home() {
             Report Issues
           </div>
           <hr className="h-px my-1 bg-gray-200 border-0 dark:bg-fuchsia-800"/>
-          <Info info={REPORT_INSTRUCTIONS} className={"list-item"}></Info>
+          <Info info={REPORT_INSTRUCTIONS} className={"list-disc"}></Info>
         </div>
       </div>
 
