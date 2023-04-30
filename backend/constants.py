@@ -1,5 +1,7 @@
 from argparse import Namespace
 
+APP_NAME = 'Registration Server App'
+
 MODES = Namespace(
     FLUSH='FLUSH',
     DEFERRED='DEFERRED'

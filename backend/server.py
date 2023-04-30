@@ -1,8 +1,8 @@
 from flask import *
 from registration import Registration
-from constants import REQ_KEYS, MODES
+from constants import APP_NAME, REQ_KEYS, MODES
 
-app = Flask(__name__, static_folder="./")
+app = Flask(APP_NAME, static_folder="./")
 
 
 @app.route("/calculate", methods=["POST"])
