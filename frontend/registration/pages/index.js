@@ -1,4 +1,5 @@
 import PointInput from "@/components/point_input";
+import PointInputBlock from "@/components/point_input";
 
 export default function Home() {
   return (
@@ -13,8 +14,8 @@ export default function Home() {
             Input
           </div>
           <hr className="h-px my-1 bg-gray-200 border-0 dark:bg-sky-800"/>
-          <PointInput title={"Home"}></PointInput>
-          <PointInput title={"Other"}></PointInput>
+          <PointInputBlock title={"Home"}></PointInputBlock>
+          <PointInputBlock title={"Other"}></PointInputBlock>
         </div>
         <div className={"bg-sky-200 rounded-lg w-full mx-3 p-3 text-sky-800"}>
           <div className={"text-3xl"}>

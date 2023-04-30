@@ -1,4 +1,4 @@
-const Input = ({id, name}) => (
+const PointInput = ({id, name}) => (
   <input
     className={"block text-black bg-white w-full border border-sky-500 rounded-md focus:outline-none text-center w-32"}
     type="text"
@@ -12,17 +12,17 @@ const PointRow = (prefix, rowNum) => [
     Point {rowNum}
   </div>,
   <div className={"px-2 col-span-2 m-auto"}>
-    <Input id={`${prefix}_point${rowNum}_x`} rowNum={`${prefix}_point${rowNum}`}></Input>
+    <PointInput id={`${prefix}_point${rowNum}_x`} rowNum={`${prefix}_point${rowNum}`}></PointInput>
   </div>,
   <div className={"px-2 col-span-2 m-auto"}>
-    <Input id={`${prefix}_point${rowNum}_y`} rowNum={`${prefix}_point${rowNum}`}></Input>
+    <PointInput id={`${prefix}_point${rowNum}_y`} rowNum={`${prefix}_point${rowNum}`}></PointInput>
   </div>,
   <div className={"px-2 col-span-2 m-auto"}>
-    <Input id={`${prefix}_point${rowNum}_z`} rowNum={`${prefix}_point${rowNum}`}></Input>
+    <PointInput id={`${prefix}_point${rowNum}_z`} rowNum={`${prefix}_point${rowNum}`}></PointInput>
   </div>
 ]
 
-export default function PointInput({ title }) {
+export default function PointInputBlock({ title }) {
   return <div className={"w-full"}>
     <div className={"text-xl pt-2"}>
       {title} Coordinate Points
