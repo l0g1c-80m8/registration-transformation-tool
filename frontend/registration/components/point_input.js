@@ -31,7 +31,7 @@ const PointRow = (prefix, rowNum) => [
 export default function PointInput({ title }) {
   return <div className={"w-full"}>
     <div className={"text-xl pt-2"}>
-      {title}
+      {title} Points
     </div>
     <div className={"grid gap-4 grid-cols-7 grid-rows-5 my-4 text-center"}>
       <div>Point #</div>
