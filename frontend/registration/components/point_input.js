@@ -1,30 +1,24 @@
+const Input = ({id, name}) => (
+  <input
+    className={"block text-black bg-white w-full border border-sky-500 rounded-md focus:outline-none text-center w-32"}
+    type="text"
+    id={id}
+    name={name}
+  />
+)
+
 const PointRow = (prefix, rowNum) => [
   <div>
     Point {rowNum}
   </div>,
-  <div className={"px-2 col-span-2"}>
-    <input
-      className={"block text-black bg-white w-full border border-sky-500 rounded-md focus:outline-none text-center"}
-      type="text"
-      id={`${prefix}_point${rowNum}_x`}
-      name={`${prefix}_point${rowNum}`}
-    />
+  <div className={"px-2 col-span-2 m-auto"}>
+    <Input id={`${prefix}_point${rowNum}_x`} rowNum={`${prefix}_point${rowNum}`}></Input>
   </div>,
-  <div className={"px-2 col-span-2"}>
-    <input
-      className={"block text-black bg-white w-full border border-sky-500 rounded-md focus:outline-none text-center"}
-      type="text"
-      id={`${prefix}_point${rowNum}_y`}
-      name={`${prefix}_point${rowNum}`}
-    />
+  <div className={"px-2 col-span-2 m-auto"}>
+    <Input id={`${prefix}_point${rowNum}_y`} rowNum={`${prefix}_point${rowNum}`}></Input>
   </div>,
-  <div className={"px-2 col-span-2"}>
-    <input
-      className={"block text-black bg-white w-full border border-sky-500 rounded-md focus:outline-none text-center"}
-      type="text"
-      id={`${prefix}_point${rowNum}_z`}
-      name={`${prefix}_point${rowNum}`}
-    />
+  <div className={"px-2 col-span-2 m-auto"}>
+    <Input id={`${prefix}_point${rowNum}_z`} rowNum={`${prefix}_point${rowNum}`}></Input>
   </div>
 ]
 
