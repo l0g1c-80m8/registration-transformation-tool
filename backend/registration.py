@@ -24,7 +24,7 @@ class Registration:
     # types
     EULER_ANGLES = namedtuple('EulerAngles', ['X', 'Y', 'Z'])
 
-    def __init__(self, home_pts, other_pts, mode=MODES.FLUSH):
+    def __init__(self, home_pts, other_pts, mode=MODES.DEFERRED):
         self._home_pts = _format_points(home_pts)
         self._other_pts = _format_points(other_pts)
 
