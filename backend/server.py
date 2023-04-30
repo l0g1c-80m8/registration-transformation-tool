@@ -1,6 +1,6 @@
 from flask import *
 from registration import Registration
-from constants import APP_NAME, REQ_KEYS, MODES
+from constants import APP_NAME, MODES, REQ_KEYS
 
 app = Flask(APP_NAME, static_folder="./")
 
@@ -13,10 +13,13 @@ def calculate():
         MODES.FLUSH
     )
 
-    response = app.response_class(
-        response=json.dumps(reg.transformations),
-        status=200,
-        mimetype='application/json'
-    )
+    try:
+        response = app.response_class(
+            response=json.dumps(reg.transformations),
+            status=200,
+            mimetype='application/json'
+        )
+    except Exception as e:
+        response = app.response_class(status=500)
 
     return response
