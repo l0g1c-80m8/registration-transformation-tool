@@ -1,4 +1,5 @@
 import PointInputBlock from "@/components/point_input";
+import Instruction from "@/components/instruction";
 
 export default function Home() {
   return (
@@ -23,8 +24,14 @@ export default function Home() {
           <hr className="h-px my-1 bg-gray-200 border-0 dark:bg-blue-800"/>
         </div>
       </div>
-      <div>
-        Section with usage instructions and contribution/error reporting instructions
+      <div className={"flex flex-row w-full"}>
+        <div className={"bg-indigo-200 rounded-lg w-full mx-3 my-4 p-3 text-indigo-800"}>
+          <div className={"text-3xl"}>
+            Instructions
+          </div>
+          <hr className="h-px my-1 bg-gray-200 border-0 dark:bg-indigo-800"/>
+          <Instruction></Instruction>
+        </div>
       </div>
     </main>
   )
