@@ -1,4 +1,3 @@
-import PointInput from "@/components/point_input";
 import PointInputBlock from "@/components/point_input";
 
 export default function Home() {
