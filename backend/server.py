@@ -14,7 +14,7 @@ def calculate():
     )
 
     response = app.response_class(
-        response=json.dumps(reg.transformation_mat),
+        response=json.dumps(reg.transformations),
         status=200,
         mimetype='application/json'
     )
