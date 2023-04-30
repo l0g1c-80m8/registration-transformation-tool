@@ -38,6 +38,15 @@ export default function PointInputBlock({ title }) {
       {...PointRow(title.toLowerCase(), 3)}
       {...PointRow(title.toLowerCase(), 4)}
     </div>
-    <div className={"py-2"}> Upload File</div>
+    <div className={"py-2 w-full text-center"}>
+      <input type="file" className="
+      text-sm text-slate-500 m-auto
+      file:mr-4 file:py-2 file:px-4
+      file:rounded-full file:border-0
+      file:text-sm file:font-semibold
+      file:bg-sky-50 file:text-sky-700
+      hover:file:bg-sky-100 text-center-last
+    "/>
+    </div>
   </div>
 }
