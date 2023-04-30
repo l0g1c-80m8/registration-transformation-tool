@@ -1,0 +1,5 @@
+const REPORT_INSTRUCTIONS = [
+
+];
+
+export default REPORT_INSTRUCTIONS
