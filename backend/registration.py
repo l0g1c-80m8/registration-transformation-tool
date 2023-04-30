@@ -1,7 +1,7 @@
 import numpy as np
 
 from collections import namedtuple
-from constants import MODES
+from constants import MODES, RESP_KEYS
 
 
 def _format_points(points_dict):
@@ -104,3 +104,13 @@ class Registration:
             beta,  # beta
             np.arctan2(rot[1, 0] / np.cos(beta), rot[0, 0] / np.cos(beta))  # gamma
         ]
+
+    @property
+    def transformations(self):
+        return {
+            RESP_KEYS.TRANSFORMATION_MATRIX: self.transformation_mat,
+            RESP_KEYS.ROTATION_MATRIX: self.matrix_rot,
+            RESP_KEYS.QUATERNION_ROTATION: self.quaternion_rot,
+            RESP_KEYS.EULER_ROTATION: self.euler_rot,
+            RESP_KEYS.TRANSLATION: self.translation,
+        }
