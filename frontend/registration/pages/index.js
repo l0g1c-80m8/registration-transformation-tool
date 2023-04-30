@@ -6,7 +6,7 @@ import REPORT_INSTRUCTIONS from "@/constants/report_issues.constants";
 
 export default function Home() {
   return (
-    <main className={"min-h-screen min-w-screen dark:bg-slate-800 text-zinc-50 px-6"}>
+    <main className={"min-h-screen min-w-screen dark:bg-slate-800 text-slate-50 px-6"}>
 
       <div className={"text-5xl pl-6 pt-6"}>
         Registration Tool
@@ -38,7 +38,7 @@ export default function Home() {
             Instructions
           </div>
           <hr className="h-px my-1 bg-gray-200 border-0 dark:bg-indigo-800"/>
-          <Info info={INSTRUCTIONS}></Info>
+          <Info info={INSTRUCTIONS} className={"list-decimal"}></Info>
         </div>
       </div>
 
@@ -49,7 +49,7 @@ export default function Home() {
             Report Issues
           </div>
           <hr className="h-px my-1 bg-gray-200 border-0 dark:bg-fuchsia-800"/>
-          <Info info={REPORT_INSTRUCTIONS}></Info>
+          <Info info={REPORT_INSTRUCTIONS} className={"list-item"}></Info>
         </div>
       </div>
 

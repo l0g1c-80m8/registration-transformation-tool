@@ -1,8 +1,8 @@
 import _map from 'lodash/map'
 
-export default function Info({info}) {
+export default function Info({info, className}) {
   return <div>
-    <ol className={"list-decimal pl-6"}>
+    <ol className={`${className} pl-6`}>
       {..._map(
         info,
         info_item => <li>
