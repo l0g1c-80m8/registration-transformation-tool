@@ -69,5 +69,14 @@ class Registration:
         # step 6. calculate the translation
         self._translation = centroid_other - np.dot(self._matrix_rot, centroid_home)
 
+        # step 7. calculate quaternion rotation
+        r = np.math.sqrt(1.0 + self._matrix_rot[0, 0] + self._matrix_rot[1, 1] + self._matrix_rot[2, 2]) * 0.5
+        self._quaternion_rot = [
+            (self._matrix_rot[2, 1] - self._matrix_rot[1, 2]) / (4 * r),  # i
+            (self._matrix_rot[0, 2] - self._matrix_rot[2, 0]) / (4 * r),  # j
+            (self._matrix_rot[1, 0] - self._matrix_rot[0, 1]) / (4 * r),  # k
+            r  # real
+        ]
+
 
 
