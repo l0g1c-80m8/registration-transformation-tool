@@ -101,11 +101,11 @@ class Registration:
         # extra 7.3. calculate euler angles
         # https://stackoverflow.com/questions/54616049/converting-a-rotation-matrix-to-euler-angles-and-back-special-case
         beta = -np.arcsin(rot[2, 0])
-        self._euler_rot = [
-            np.arctan2(rot[2, 1] / np.cos(beta), rot[2, 2] / np.cos(beta)),  # alpha
-            beta,  # beta
-            np.arctan2(rot[1, 0] / np.cos(beta), rot[0, 0] / np.cos(beta))  # gamma
-        ]
+        self._euler_rot = self.EULER_ANGLES(
+            X=np.arctan2(rot[2, 1] / np.cos(beta), rot[2, 2] / np.cos(beta)),  # alpha
+            Y=beta,  # beta
+            Z=np.arctan2(rot[1, 0] / np.cos(beta), rot[0, 0] / np.cos(beta))  # gamma
+        )
 
     @property
     def transformations(self):
