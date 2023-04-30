@@ -1,6 +1,7 @@
 import numpy as np
 
 from collections import namedtuple
+from constants import MODES
 
 
 def _format_points(points_dict):
@@ -23,12 +24,16 @@ class Registration:
     # types
     EULER_ANGLES = namedtuple('EulerAngles', ['X', 'Y', 'Z'])
 
-    def __init__(self, home_pts, other_pts):
+    def __init__(self, home_pts, other_pts, mode=MODES.FLUSH):
         self._home_pts = _format_points(home_pts)
         self._other_pts = _format_points(other_pts)
 
         # calculate registration
-        self._registration()
+        if mode == MODES.FLUSH:
+            self._registration()
+
+    def registration(self):
+        self.registration()
 
     @property
     def transformation_mat(self):
