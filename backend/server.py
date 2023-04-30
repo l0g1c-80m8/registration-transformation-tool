@@ -10,7 +10,7 @@ def calculate():
     reg = Registration(request.json['home_pts'], request.json['other_pts'], MODES.FLUSH)
 
     response = app.response_class(
-        response=json.dumps(reg.matrix_rot),
+        response=json.dumps(reg.transformation_mat),
         status=200,
         mimetype='application/json'
     )

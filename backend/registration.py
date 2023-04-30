@@ -78,10 +78,15 @@ class Registration:
 
         # step 6. calculate the translation
         t = centroid_other - np.dot(rot, centroid_home)
-        self._translation = t.tolist()
+        self._translation = list(map(lambda translation_dim: translation_dim[0], t.tolist()))
 
         # extra 7.1. set the rotation matrix
-        # print(self._matrix_rot, type(self._matrix_rot), self._translation, type(self._translation))
+        self._transformation_mat = [
+            self._matrix_rot[0] + [self._translation[0]],
+            self._matrix_rot[1] + [self._translation[1]],
+            self._matrix_rot[2] + [self._translation[2]],
+            [0.0, 0.0, 0.0, 1.0]
+        ]
 
         # extra 7.2. calculate quaternion rotation
         r = np.math.sqrt(1.0 + rot[0, 0] + rot[1, 1] + rot[2, 2]) * 0.5
@@ -99,6 +104,3 @@ class Registration:
             beta,  # beta
             np.arctan2(rot[1, 0] / np.cos(beta), rot[0, 0] / np.cos(beta))  # gamma
         ]
-
-
-
