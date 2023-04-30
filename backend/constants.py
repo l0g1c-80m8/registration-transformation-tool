@@ -5,7 +5,7 @@ MODES = Namespace(
     DEFERRED='DEFERRED'
 )
 
-INPUT_KEYS = Namespace(
+REQ_KEYS = Namespace(
     HOME_FRAME_POINTS='home_pts',
     OTHER_FRAME_POINTS='other_pts'
 )
