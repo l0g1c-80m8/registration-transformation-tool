@@ -7,6 +7,7 @@ import INSTRUCTIONS from "@/constants/instructions.constants";
 import REPORT_INSTRUCTIONS from "@/constants/report_issues.constants";
 
 import logo from '@/public/logo.gif'
+import Output from "@/components/output";
 
 export default function Home() {
   return (
@@ -39,6 +40,7 @@ export default function Home() {
             Output
           </div>
           <hr className="h-px my-1 bg-gray-200 border-0 dark:bg-blue-800"/>
+          <Output></Output>
         </div>
       </div>
 
