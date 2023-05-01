@@ -3,8 +3,11 @@ import Image from "next/image";
 import PointInputBlock from "@/components/point_input";
 import Info from "@/components/info";
 
+import { PAGE_ACTIONS } from "@/constants/constants";
+
 import INSTRUCTIONS from "@/constants/instructions.constants";
 import REPORT_INSTRUCTIONS from "@/constants/report_issues.constants";
+import { INPUT_ACTIONS } from "@/actions/actions";
 
 import logo from '@/public/logo.gif'
 import Output from "@/components/output";
@@ -36,15 +39,21 @@ export default function Home() {
           <hr className="h-px my-1 bg-gray-200 border-0 dark:bg-sky-800"/>
           {/*submit and clear buttons*/}
           <div className={"flex flex-row items-center justify-around"}>
-            <button id="submit-btn" className="mt-2 py-2 px-4
-            rounded-full border-0 bg-sky-50 hover:bg-sky-100
-            text-sky-700 w-32"
+            <button
+              id="submit-btn"
+              onClick={PAGE_ACTIONS[INPUT_ACTIONS.SUBMIT]}
+              className="mt-2 py-2 px-4
+              rounded-full border-0 bg-sky-50 hover:bg-sky-100
+              text-sky-700 w-32"
             >
               Submit
             </button>
-            <button id="clear-btn" className="mt-2 py-2 px-4
-            rounded-full border-0 bg-sky-50 hover:bg-sky-100
-            text-sky-700 w-32"
+            <button
+              id="submit-btn"
+              onClick={PAGE_ACTIONS[INPUT_ACTIONS.CLEAR]}
+              className="mt-2 py-2 px-4
+              rounded-full border-0 bg-sky-50 hover:bg-sky-100
+              text-sky-700 w-32"
             >
               Clear
             </button>
