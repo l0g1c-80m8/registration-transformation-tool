@@ -1,3 +1,7 @@
+import { PAGE_ACTIONS } from "@/constants/constants";
+import { INPUT_ACTIONS } from "@/actions/actions";
+
+
 const PointInput = ({id, name}) => (
   <input
     key={id}
@@ -40,14 +44,16 @@ export default function PointInputBlock({ title }) {
       {...PointRow(title.toLowerCase(), 4)}
     </div>
     <div className={"py-2 w-full text-center"}>
-      <input type="file" className="
-      text-sm text-slate-500 m-auto
-      file:mr-4 file:py-2 file:px-4
-      file:rounded-full file:border-0
-      file:text-sm file:font-semibold
-      file:bg-sky-50 file:text-sky-700
-      hover:file:bg-sky-100 text-center-last
-    "/>
+      <input
+        type="file"
+        className=" text-sm text-slate-500
+        file:mr-4 file:py-2 file:px-4 m-auto
+        file:rounded-full file:border-0
+        file:text-sm file:font-semibold
+        file:bg-sky-50 file:text-sky-700
+        hover:file:bg-sky-100 text-center-last"
+        onClick={() => PAGE_ACTIONS[INPUT_ACTIONS.FILE_SELECT](title)}
+      />
     </div>
   </div>
 }
