@@ -1,5 +1,6 @@
 const PointInput = ({id, name}) => (
   <input
+    key={id}
     className={"block text-black bg-white w-full border border-sky-500 rounded-md focus:outline-none text-center w-32"}
     type="text"
     id={id}
@@ -8,16 +9,16 @@ const PointInput = ({id, name}) => (
 )
 
 const PointRow = (prefix, rowNum) => [
-  <div>
+  <div key={`point_num_${rowNum}`}>
     Point {rowNum}
   </div>,
-  <div className={"px-2 col-span-2 m-auto"}>
+  <div className={"px-2 col-span-2 m-auto"} key={`point_${rowNum}_x_input`}>
     <PointInput id={`${prefix}_point${rowNum}_x`} rowNum={`${prefix}_point${rowNum}`}></PointInput>
   </div>,
-  <div className={"px-2 col-span-2 m-auto"}>
+  <div className={"px-2 col-span-2 m-auto"} key={`point_${rowNum}_y_input`}>
     <PointInput id={`${prefix}_point${rowNum}_y`} rowNum={`${prefix}_point${rowNum}`}></PointInput>
   </div>,
-  <div className={"px-2 col-span-2 m-auto"}>
+  <div className={"px-2 col-span-2 m-auto"} key={`point_${rowNum}_z_input`}>
     <PointInput id={`${prefix}_point${rowNum}_z`} rowNum={`${prefix}_point${rowNum}`}></PointInput>
   </div>
 ]
