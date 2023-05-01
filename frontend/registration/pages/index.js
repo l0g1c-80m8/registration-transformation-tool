@@ -9,12 +9,16 @@ export default function Home() {
     <main className={"min-h-screen min-w-screen dark:bg-slate-800 text-slate-50 px-6"}>
 
       <div className={"text-5xl pl-6 pt-6"}>
-        Registration Tool
+        <div flex flex-row w-full>
+          <div>logo here</div>
+          <div> Registration Tool </div>
+        </div>
       </div>
       <hr className="h-px mx-2 my-6 bg-gray-100 border-0 rounded dark:bg-gray-100"/>
 
       {/*input and the output sections*/}
       <div className={"flex flex-row w-full"}>
+        {/*input section*/}
         <div className={"bg-sky-200 rounded-lg w-full mx-3 p-3 text-sky-800"}>
           <div className={"text-3xl"}>
             Input
@@ -23,6 +27,7 @@ export default function Home() {
           <PointInputBlock title={"Home"}></PointInputBlock>
           <PointInputBlock title={"Other"}></PointInputBlock>
         </div>
+        {/*output section*/}
         <div className={"bg-blue-200 rounded-lg w-full mx-3 p-3 text-blue-800"}>
           <div className={"text-3xl"}>
             Output
