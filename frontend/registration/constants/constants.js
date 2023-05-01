@@ -9,7 +9,7 @@ const PAGE_ACTIONS = {
   [INPUT_ACTIONS.CLEAR]: () => {
     console.log('clear');
   },
-  [INPUT_ACTIONS.POINT_INPUT]: id => {
+  [INPUT_ACTIONS.POINT_INPUT]: () => {
     _noop()
   },
   [INPUT_ACTIONS.FILE_SELECT]: id => {
