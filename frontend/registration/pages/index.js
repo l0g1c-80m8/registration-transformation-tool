@@ -17,7 +17,7 @@ export default function Home() {
           <div className={"mr-4"}>
             <Image src={logo} alt={"Logo"} height={52} width={52}/>
           </div>
-          <div> Registration Tool </div>
+          <div> Transformation Tool (for Registration) </div>
         </div>
       </div>
       <hr className="h-px mx-2 my-6 bg-gray-100 border-0 rounded dark:bg-gray-100"/>
