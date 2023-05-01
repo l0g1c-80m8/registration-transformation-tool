@@ -1,16 +1,22 @@
+import Image from "next/image";
+
 import PointInputBlock from "@/components/point_input";
 import Info from "@/components/info";
 
 import INSTRUCTIONS from "@/constants/instructions.constants";
 import REPORT_INSTRUCTIONS from "@/constants/report_issues.constants";
 
+import logo from '@/public/logo.gif'
+
 export default function Home() {
   return (
     <main className={"min-h-screen min-w-screen dark:bg-slate-800 text-slate-50 px-6"}>
 
       <div className={"text-5xl pl-6 pt-6"}>
-        <div flex flex-row w-full>
-          <div>logo here</div>
+        <div className={"flex flex-initial w-full"}>
+          <div className={"mr-4"}>
+            <Image src={logo} alt={"Logo"} height={52} width={52}/>
+          </div>
           <div> Registration Tool </div>
         </div>
       </div>
