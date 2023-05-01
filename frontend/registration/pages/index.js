@@ -33,6 +33,22 @@ export default function Home() {
           <hr className="h-px my-1 bg-gray-200 border-0 dark:bg-sky-800"/>
           <PointInputBlock title={"Home"}></PointInputBlock>
           <PointInputBlock title={"Other"}></PointInputBlock>
+          <hr className="h-px my-1 bg-gray-200 border-0 dark:bg-sky-800"/>
+          {/*submit and clear buttons*/}
+          <div className={"flex flex-row items-center justify-around"}>
+            <button id="submit-btn" className="mt-2 py-2 px-4
+            rounded-full border-0 bg-sky-50 hover:bg-sky-100
+            text-sky-700 w-32"
+            >
+              Submit
+            </button>
+            <button id="clear-btn" className="mt-2 py-2 px-4
+            rounded-full border-0 bg-sky-50 hover:bg-sky-100
+            text-sky-700 w-32"
+            >
+              Clear
+            </button>
+          </div>
         </div>
         {/*output section*/}
         <div className={"bg-blue-200 rounded-lg w-full mx-3 p-3 text-blue-800"}>
