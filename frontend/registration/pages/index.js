@@ -46,7 +46,7 @@ export default function Home() {
 
       {/*instructions section*/}
       <div className={"flex flex-row w-full"}>
-        <div className={"bg-indigo-200 rounded-lg w-full mx-3 my-4 p-3 text-indigo-800"}>
+        <div className={"bg-indigo-200 rounded-lg w-full mx-3 mt-4 p-3 text-indigo-800"}>
           <div className={"text-3xl"}>
             Instructions
           </div>
