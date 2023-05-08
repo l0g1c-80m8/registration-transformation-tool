@@ -9,6 +9,7 @@ const HOME_POINTS_ID_PREFIX = 'home_points';
 const OTHER_POINTS_ID_PREFIX = 'other_points';
 const HOME_POINTS_TITLE = 'Home';
 const OTHER_POINTS_TITLE = 'Home';
+const OUTPUT_SECTION_ID = 'output-section'
 
 const INITIAL_STATE = {
   [`${HOME_POINTS_ID_PREFIX}_1_x`]: '',
@@ -35,6 +36,7 @@ const INITIAL_STATE = {
   [`${OTHER_POINTS_ID_PREFIX}_4_x`]: '',
   [`${OTHER_POINTS_ID_PREFIX}_4_y`]: '',
   [`${OTHER_POINTS_ID_PREFIX}_4_x`]: '',
+  [OUTPUT_SECTION_ID]: '',
 };
 
 export {
@@ -43,5 +45,6 @@ export {
   OTHER_POINTS_ID_PREFIX,
   HOME_POINTS_TITLE,
   OTHER_POINTS_TITLE,
+  OUTPUT_SECTION_ID,
   INITIAL_STATE,
 };

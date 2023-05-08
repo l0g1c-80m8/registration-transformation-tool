@@ -16,6 +16,7 @@ import {
   HOME_POINTS_TITLE,
   OTHER_POINTS_ID_PREFIX,
   OTHER_POINTS_TITLE,
+  OUTPUT_SECTION_ID
 } from "@/constants/constants";
 
 import logo from '@/public/logo.gif'
@@ -89,7 +90,7 @@ export default function Home() {
             Output
           </div>
           <hr className="h-px my-1 bg-gray-200 border-0 dark:bg-blue-800"/>
-          <Output></Output>
+          <Output value={pageState[OUTPUT_SECTION_ID]}></Output>
         </div>
       </div>
 
