@@ -39,8 +39,18 @@ export default function Home() {
             Input
           </div>
           <hr className="h-px my-1 bg-gray-200 border-0 dark:bg-sky-800"/>
-          <PointInputBlock title={"Home"} onAction={onAction} pageState={pageState}></PointInputBlock>
-          <PointInputBlock title={"Other"} onAction={onAction} pageState={pageState}></PointInputBlock>
+          <PointInputBlock
+            key="home"
+            title={"Home"}
+            onAction={onAction}
+            pageState={pageState}>
+          </PointInputBlock>
+          <PointInputBlock
+            key="other"
+            title={"Other"}
+            onAction={onAction}
+            pageState={pageState}>
+          </PointInputBlock>
           <hr className="h-px my-1 bg-gray-200 border-0 dark:bg-sky-800"/>
           {/*submit and clear buttons*/}
           <div className={"flex flex-row items-center justify-around"}>
