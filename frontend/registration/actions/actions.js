@@ -37,7 +37,7 @@ const getPageActions = (pageState, setPageState) => ({
         'pt4': [
           _toNumber(_get(pageState, `${HOME_POINTS_ID_PREFIX}_3_x`, null)),
           _toNumber(_get(pageState, `${HOME_POINTS_ID_PREFIX}_3_y`, null)),
-          _toNumber(_get(pageState, `${HOME_POINTS_ID_PREFIX}_4_z`, null))
+          _toNumber(_get(pageState, `${HOME_POINTS_ID_PREFIX}_3_z`, null))
         ],
       },
       [OTHER_POINTS_ID_PREFIX]: {
@@ -59,7 +59,7 @@ const getPageActions = (pageState, setPageState) => ({
         'pt4': [
           _toNumber(_get(pageState, `${OTHER_POINTS_ID_PREFIX}_3_x`, null)),
           _toNumber(_get(pageState, `${OTHER_POINTS_ID_PREFIX}_3_y`, null)),
-          _toNumber(_get(pageState, `${OTHER_POINTS_ID_PREFIX}_4_z`, null))
+          _toNumber(_get(pageState, `${OTHER_POINTS_ID_PREFIX}_3_z`, null))
         ],
       }
     };
