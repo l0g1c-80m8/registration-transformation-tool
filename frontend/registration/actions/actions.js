@@ -2,7 +2,7 @@ import _forEach from 'lodash/forEach';
 import _keysIn from 'lodash/keysIn';
 import _set from 'lodash/set';
 
-import { INPUT_ACTIONS } from "@/constants/constants";
+import { INITIAL_STATE, INPUT_ACTIONS } from "@/constants/constants";
 
 const getPageActions = (pageState, setPageState) => ({
   [INPUT_ACTIONS.SUBMIT]: () => {
@@ -14,9 +14,7 @@ const getPageActions = (pageState, setPageState) => ({
   },
   [INPUT_ACTIONS.CLEAR]: () => {
     // set all keys to empty string values
-    const copyState = { ...pageState };
-    _forEach(_keysIn(pageState), key => _set(copyState[key] = ''));
-    setPageState({ ...copyState });
+    setPageState({ ...INITIAL_STATE });
   },
   [INPUT_ACTIONS.POINT_INPUT]: id => event => {
     setPageState({

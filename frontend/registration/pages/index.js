@@ -10,18 +10,19 @@ import { getPageActions } from "@/actions/actions";
 import INSTRUCTIONS from "@/constants/instructions.constants";
 import REPORT_INSTRUCTIONS from "@/constants/report_issues.constants";
 import {
+  INITIAL_STATE,
   INPUT_ACTIONS,
   HOME_POINTS_ID_PREFIX,
   HOME_POINTS_TITLE,
   OTHER_POINTS_ID_PREFIX,
-  OTHER_POINTS_TITLE
+  OTHER_POINTS_TITLE,
 } from "@/constants/constants";
 
 import logo from '@/public/logo.gif'
 import Output from "@/components/output";
 
 export default function Home() {
-  const [pageState, setPageState] = useState({});
+  const [pageState, setPageState] = useState({ ...INITIAL_STATE });
   const onAction = getPageActions(pageState, setPageState);
 
   return (
