@@ -1,14 +1,14 @@
 from flask import *
-from flask_cors import cross_origin
+from flask_cors import CORS
 from registration import Registration
 
 from constants import APP_NAME, MODES, REQ_KEYS
 
 app = Flask(APP_NAME, static_folder="./")
+cors = CORS(app)
 
 
 @app.route("/calculate", methods=["POST"])
-@cross_origin()
 def calculate():
     reg = Registration(
         request.json[REQ_KEYS.HOME_FRAME_POINTS],
