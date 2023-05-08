@@ -1,22 +1,10 @@
-import _noop from 'lodash/noop';
-
-import { INPUT_ACTIONS } from "@/actions/actions";
-
-const PAGE_ACTIONS = {
-  [INPUT_ACTIONS.SUBMIT]: () => {
-    console.log('submit');
-  },
-  [INPUT_ACTIONS.CLEAR]: () => {
-    console.log('clear');
-  },
-  [INPUT_ACTIONS.POINT_INPUT]: () => {
-    _noop()
-  },
-  [INPUT_ACTIONS.FILE_SELECT]: id => {
-    console.log(`file select ${id}`);
-  },
+const INPUT_ACTIONS = {
+  POINT_INPUT: 'POINT_INPUT',
+  FILE_SELECT: 'FILE_SELECT',
+  SUBMIT: 'SUBMIT',
+  CLEAR: 'CLEAR'
 };
 
 export {
-  PAGE_ACTIONS
+  INPUT_ACTIONS
 };

@@ -1,18 +1,23 @@
+import { useState } from "react";
+
 import Image from "next/image";
 
 import PointInputBlock from "@/components/point_input";
 import Info from "@/components/info";
 
-import { PAGE_ACTIONS } from "@/constants/constants";
+import { getPageActions } from "@/actions/actions";
 
 import INSTRUCTIONS from "@/constants/instructions.constants";
 import REPORT_INSTRUCTIONS from "@/constants/report_issues.constants";
-import { INPUT_ACTIONS } from "@/actions/actions";
+import { INPUT_ACTIONS } from "@/constants/constants";
 
 import logo from '@/public/logo.gif'
 import Output from "@/components/output";
 
 export default function Home() {
+  const [pageState, setPageState] = useState({});
+  const onAction = getPageActions(pageState, setPageState);
+
   return (
     <main className={"min-h-screen min-w-screen dark:bg-slate-800 text-slate-50 px-6"}>
 
@@ -34,14 +39,14 @@ export default function Home() {
             Input
           </div>
           <hr className="h-px my-1 bg-gray-200 border-0 dark:bg-sky-800"/>
-          <PointInputBlock title={"Home"}></PointInputBlock>
-          <PointInputBlock title={"Other"}></PointInputBlock>
+          <PointInputBlock title={"Home"} onAction={onAction} pageState={pageState}></PointInputBlock>
+          <PointInputBlock title={"Other"} onAction={onAction} pageState={pageState}></PointInputBlock>
           <hr className="h-px my-1 bg-gray-200 border-0 dark:bg-sky-800"/>
           {/*submit and clear buttons*/}
           <div className={"flex flex-row items-center justify-around"}>
             <button
               id="submit-btn"
-              onClick={PAGE_ACTIONS[INPUT_ACTIONS.SUBMIT]}
+              onClick={ onAction[INPUT_ACTIONS.SUBMIT] }
               className="mt-2 py-2 px-4
               rounded-full border-0 bg-sky-50 hover:bg-sky-100
               text-sky-700 w-32"
@@ -50,7 +55,7 @@ export default function Home() {
             </button>
             <button
               id="submit-btn"
-              onClick={PAGE_ACTIONS[INPUT_ACTIONS.CLEAR]}
+              onClick={ onAction[INPUT_ACTIONS.CLEAR] }
               className="mt-2 py-2 px-4
               rounded-full border-0 bg-sky-50 hover:bg-sky-100
               text-sky-700 w-32"
