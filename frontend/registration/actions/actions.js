@@ -61,9 +61,10 @@ const getPageActions = (pageState, setPageState) => ({
     };
     // validate that the values are correct
     const response = await fetchTransformation(payload);
+    console.log(response);
     setPageState({
       ...pageState,
-      [OUTPUT_SECTION_ID]: response
+      [OUTPUT_SECTION_ID]: JSON.stringify(_get(response, 'data', ['no response']))
     })
   },
   [INPUT_ACTIONS.CLEAR]: () => {
