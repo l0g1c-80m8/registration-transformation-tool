@@ -8,9 +8,9 @@ app = Flask(APP_NAME, static_folder="./")
 cors = CORS(app, resources={
     r"*": {
         "origins": [
-            "https://registration-transformation-tool.vercel.app/",
-            "https://registration-transformation-tool-logic-bomb.vercel.app/",
-            "https://registration-transformation-tool-git-develop-logic-bomb.vercel.app/"
+            "https://registration-transformation-tool.vercel.app",
+            "https://registration-transformation-tool-logic-bomb.vercel.app",
+            "https://registration-transformation-tool-git-develop-logic-bomb.vercel.app"
         ]
     }
 })
