@@ -63,7 +63,7 @@ const INITIAL_STATE = {
 //   [`${OTHER_POINTS_ID_PREFIX}_3_z`]: -4.77,
 //   [`${OTHER_POINTS_ID_PREFIX}_4_x`]: 208.21,
 //   [`${OTHER_POINTS_ID_PREFIX}_4_y`]: 1016,
-//   [`${OTHER_POINTS_ID_PREFIX}_4_z`]: 6.9,
+//   [`${OTHER_POINTS_ID_PREFIX}_4_z`]: -6.9,
 //   [OUTPUT_SECTION_ID]: '',
 // };
 
