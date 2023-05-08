@@ -66,7 +66,7 @@ export default function Home() {
           <div className={"flex flex-row items-center justify-around"}>
             <button
               id="submit-btn"
-              onClick={ onAction[INPUT_ACTIONS.SUBMIT] }
+              onClick={ () => onAction[INPUT_ACTIONS.SUBMIT]() }
               className="mt-2 py-2 px-4
               rounded-full border-0 bg-sky-50 hover:bg-sky-100
               text-sky-700 w-32"
