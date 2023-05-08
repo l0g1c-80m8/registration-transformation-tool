@@ -20,52 +20,51 @@ const getPageActions = (pageState, setPageState) => ({
     const payload = {
       [HOME_POINTS_ID_PREFIX]: {
         'pt1': [
-          _toNumber(_get(pageState, `${HOME_POINTS_ID_PREFIX}_0_x`, null)),
-          _toNumber(_get(pageState, `${HOME_POINTS_ID_PREFIX}_0_y`, null)),
-          _toNumber(_get(pageState, `${HOME_POINTS_ID_PREFIX}_0_z`, null))
-        ],
-        'pt2': [
           _toNumber(_get(pageState, `${HOME_POINTS_ID_PREFIX}_1_x`, null)),
           _toNumber(_get(pageState, `${HOME_POINTS_ID_PREFIX}_1_y`, null)),
           _toNumber(_get(pageState, `${HOME_POINTS_ID_PREFIX}_1_z`, null))
         ],
-        'pt3': [
+        'pt2': [
           _toNumber(_get(pageState, `${HOME_POINTS_ID_PREFIX}_2_x`, null)),
           _toNumber(_get(pageState, `${HOME_POINTS_ID_PREFIX}_2_y`, null)),
           _toNumber(_get(pageState, `${HOME_POINTS_ID_PREFIX}_2_z`, null))
         ],
-        'pt4': [
+        'pt3': [
           _toNumber(_get(pageState, `${HOME_POINTS_ID_PREFIX}_3_x`, null)),
           _toNumber(_get(pageState, `${HOME_POINTS_ID_PREFIX}_3_y`, null)),
           _toNumber(_get(pageState, `${HOME_POINTS_ID_PREFIX}_3_z`, null))
         ],
+        'pt4': [
+          _toNumber(_get(pageState, `${HOME_POINTS_ID_PREFIX}_4_x`, null)),
+          _toNumber(_get(pageState, `${HOME_POINTS_ID_PREFIX}_4_y`, null)),
+          _toNumber(_get(pageState, `${HOME_POINTS_ID_PREFIX}_4_z`, null))
+        ],
       },
       [OTHER_POINTS_ID_PREFIX]: {
         'pt1': [
-          _toNumber(_get(pageState, `${OTHER_POINTS_ID_PREFIX}_0_x`, null)),
-          _toNumber(_get(pageState, `${OTHER_POINTS_ID_PREFIX}_0_y`, null)),
-          _toNumber(_get(pageState, `${OTHER_POINTS_ID_PREFIX}_0_z`, null))
-        ],
-        'pt2': [
           _toNumber(_get(pageState, `${OTHER_POINTS_ID_PREFIX}_1_x`, null)),
           _toNumber(_get(pageState, `${OTHER_POINTS_ID_PREFIX}_1_y`, null)),
           _toNumber(_get(pageState, `${OTHER_POINTS_ID_PREFIX}_1_z`, null))
         ],
-        'pt3': [
+        'pt2': [
           _toNumber(_get(pageState, `${OTHER_POINTS_ID_PREFIX}_2_x`, null)),
           _toNumber(_get(pageState, `${OTHER_POINTS_ID_PREFIX}_2_y`, null)),
           _toNumber(_get(pageState, `${OTHER_POINTS_ID_PREFIX}_2_z`, null))
         ],
-        'pt4': [
+        'pt3': [
           _toNumber(_get(pageState, `${OTHER_POINTS_ID_PREFIX}_3_x`, null)),
           _toNumber(_get(pageState, `${OTHER_POINTS_ID_PREFIX}_3_y`, null)),
           _toNumber(_get(pageState, `${OTHER_POINTS_ID_PREFIX}_3_z`, null))
         ],
+        'pt4': [
+          _toNumber(_get(pageState, `${OTHER_POINTS_ID_PREFIX}_4_x`, null)),
+          _toNumber(_get(pageState, `${OTHER_POINTS_ID_PREFIX}_4_y`, null)),
+          _toNumber(_get(pageState, `${OTHER_POINTS_ID_PREFIX}_4_z`, null))
+        ],
       }
     };
-    // validate that the values are correct
+    // TODO: validate that the values are correct
     const response = await fetchTransformation(payload);
-    console.log(response);
     setPageState({
       ...pageState,
       [OUTPUT_SECTION_ID]: JSON.stringify(_get(response, 'data', ['no response']))
