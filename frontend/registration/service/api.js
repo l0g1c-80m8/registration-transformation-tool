@@ -5,7 +5,7 @@ const registrationService = axios.create({
   timeout: 300,
 });
 
-const fetchTransformation = async params => await registrationService.post('/calculate', { params });
+const fetchTransformation = async payload => await registrationService.post('/calculate', { ...payload });
 
 export {
   fetchTransformation
