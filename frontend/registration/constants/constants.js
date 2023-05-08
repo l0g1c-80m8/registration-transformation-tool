@@ -5,8 +5,8 @@ const INPUT_ACTIONS = {
   CLEAR: 'CLEAR'
 };
 
-const HOME_POINTS_ID_PREFIX = 'home_points';
-const OTHER_POINTS_ID_PREFIX = 'other_points';
+const HOME_POINTS_ID_PREFIX = 'home_pts';
+const OTHER_POINTS_ID_PREFIX = 'other_pts';
 const HOME_POINTS_TITLE = 'Home';
 const OTHER_POINTS_TITLE = 'Home';
 const OUTPUT_SECTION_ID = 'output-section'
