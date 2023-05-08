@@ -68,7 +68,7 @@ export default function PointInputBlock({ title, onAction, pageState }) {
         file:text-sm file:font-semibold
         file:bg-sky-50 file:text-sky-700
         hover:file:bg-sky-100 text-center-last"
-        onClick={() => onAction[INPUT_ACTIONS.FILE_SELECT](title)}
+        onClick={onAction[INPUT_ACTIONS.FILE_SELECT](title)}
       />
     </div>
   </div>

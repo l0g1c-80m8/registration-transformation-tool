@@ -2,7 +2,7 @@ import { INPUT_ACTIONS } from "@/constants/constants";
 
 const getPageActions = (pageState, setPageState) => ({
   [INPUT_ACTIONS.SUBMIT]: () => {
-    console.log('submit');
+    console.log('submit', pageState);
   },
   [INPUT_ACTIONS.CLEAR]: () => {
     setPageState({});
@@ -13,10 +13,10 @@ const getPageActions = (pageState, setPageState) => ({
       [id]: event.target.value,
     });
   },
-  [INPUT_ACTIONS.FILE_SELECT]: (id, value) => {
+  [INPUT_ACTIONS.FILE_SELECT]: id => event => {
     setPageState({
       ...pageState,
-      [id]: value
+      [id]: event.target.value,
     });
   },
 })
