@@ -1,7 +1,3 @@
-import _forEach from 'lodash/forEach';
-import _keysIn from 'lodash/keysIn';
-import _set from 'lodash/set';
-
 import { INITIAL_STATE, INPUT_ACTIONS } from "@/constants/constants";
 
 const getPageActions = (pageState, setPageState) => ({
