@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const registrationService = axios.create({
-  baseURL: 'https://registration-server-backend.wl.r.appspot.com',
+  baseURL: 'https://localhost:5000',
   timeout: 300,
 });
 
