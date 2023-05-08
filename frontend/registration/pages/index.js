@@ -9,7 +9,13 @@ import { getPageActions } from "@/actions/actions";
 
 import INSTRUCTIONS from "@/constants/instructions.constants";
 import REPORT_INSTRUCTIONS from "@/constants/report_issues.constants";
-import { INPUT_ACTIONS } from "@/constants/constants";
+import {
+  INPUT_ACTIONS,
+  HOME_POINTS_ID_PREFIX,
+  HOME_POINTS_TITLE,
+  OTHER_POINTS_ID_PREFIX,
+  OTHER_POINTS_TITLE
+} from "@/constants/constants";
 
 import logo from '@/public/logo.gif'
 import Output from "@/components/output";
@@ -40,14 +46,16 @@ export default function Home() {
           </div>
           <hr className="h-px my-1 bg-gray-200 border-0 dark:bg-sky-800"/>
           <PointInputBlock
-            key="home"
-            title={"Home"}
+            key={HOME_POINTS_ID_PREFIX}
+            id_prefix={HOME_POINTS_ID_PREFIX}
+            title={HOME_POINTS_TITLE}
             onAction={onAction}
             pageState={pageState}>
           </PointInputBlock>
           <PointInputBlock
-            key="other"
-            title={"Other"}
+            key={OTHER_POINTS_ID_PREFIX}
+            id_prefix={OTHER_POINTS_ID_PREFIX}
+            title={OTHER_POINTS_TITLE}
             onAction={onAction}
             pageState={pageState}>
           </PointInputBlock>

@@ -5,6 +5,15 @@ const INPUT_ACTIONS = {
   CLEAR: 'CLEAR'
 };
 
+const HOME_POINTS_ID_PREFIX = 'home_points';
+const OTHER_POINTS_ID_PREFIX = 'other_points';
+const HOME_POINTS_TITLE = 'Home';
+const OTHER_POINTS_TITLE = 'Home';
+
 export {
-  INPUT_ACTIONS
+  INPUT_ACTIONS,
+  HOME_POINTS_ID_PREFIX,
+  OTHER_POINTS_ID_PREFIX,
+  HOME_POINTS_TITLE,
+  OTHER_POINTS_TITLE,
 };
