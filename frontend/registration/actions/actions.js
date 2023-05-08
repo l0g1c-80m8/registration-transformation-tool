@@ -13,6 +13,10 @@ import {
 
 const getPageActions = (pageState, setPageState) => ({
   [INPUT_ACTIONS.SUBMIT]: async () => {
+    setPageState({
+      ...pageState,
+      [OUTPUT_SECTION_ID]: ''
+    })
     const payload = {
       [HOME_POINTS_ID_PREFIX]: {
         'pt1': [
