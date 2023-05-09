@@ -8,7 +8,7 @@ const INPUT_ACTIONS = {
 const HOME_POINTS_ID_PREFIX = 'home_pts';
 const OTHER_POINTS_ID_PREFIX = 'other_pts';
 const HOME_POINTS_TITLE = 'Home';
-const OTHER_POINTS_TITLE = 'Home';
+const OTHER_POINTS_TITLE = 'Other';
 const OUTPUT_SECTION_ID = 'output-section'
 
 const INITIAL_STATE = {
