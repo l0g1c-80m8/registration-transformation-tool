@@ -1,6 +1,6 @@
 const REPORT_INSTRUCTIONS = [
   "If you find any issues with this tool, you can report them on " +
-  "<a target='_blank' href='https://github.com/l0g1c-80m8/registration-transformation-tool/issues'>GitHub 🔗</a>.",
+  "<a target='_blank' href='https://github.com/l0g1c-80m8/registration-transformation-tool/issues'><u>GitHub 🔗<u/></a>.",
   "Visit the issue creation page by clicking the link icon above.",
   "Create a new issue and describe the problem in as much detail as possible.",
   "List all the steps required to reproduce the issue.",
